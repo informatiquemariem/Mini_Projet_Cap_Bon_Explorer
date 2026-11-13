@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap Bon Explorer - Activités</title>
+</head>
+<body>
+    <header>
+        <h1>Cap Bon Explorer</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="activites.html">Activités</a>
+            <a href="agenda.html">Agenda</a>
+            <a href="reservation.html">Réservation</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Découvrez nos activités</h2>
+            <p>
+                Explorez les différentes expériences touristiques
+                proposées dans la région du Cap Bon.
+            </p>
+        </section>
+        <!-- Recherche et filtre -->
+        <section>
+            <h2>Rechercher une activité</h2>
+            <label for="recherche">Mot-clé :</label>
+            <input type="text" id="recherche" placeholder="Rechercher une activité">
+            <label for="categorie">Catégorie :</label>
+            <select id="categorie">
+                <option value="Toutes">Toutes</option>
+                <option value="Culture">Culture</option>
+                <option value="Artisanat">Artisanat</option>
+                <option value="Nature">Nature</option>
+                <option value="Découverte">Découverte</option>
+            </select>
+            <p>Nombre d'activités : <span id="compteur">8</span></p>
+        </section>
+        <!-- Catalogue des activités -->
+        <section>
+            <h2>Notre catalogue</h2>
+            <p id="aucun-resultat" hidden>
+                Aucune activité trouvée.
+            </p>
+            <article>
+                <h3>Découverte de la médina</h3>
+                <img src="images/medina.jpg" alt="Médina de Nabeul">
+                <p>Catégorie : Culture</p>
+                <p>Durée : 2h</p>
+                <p>Prix : 20 TND</p>
+                <button type="button">Voir les détails</button>
+                <a href="reservation.html">Réserver</a>
+            </article>
+            <article>
+                <h3>Atelier d'initiation à la poterie</h3>
+                <img src="images/poterie.jpg" alt="Atelier de poterie">
+                <p>Catégorie : Artisanat</p>
+                <p>Durée : 1h30</p>
+                <p>Prix : 35 TND</p>
+                <button type="button">Voir les détails</button>
+                <a href="reservation.html">Réserver</a>
+            </article>
+            <article>
+                <h3>Parcours découverte de Kerkouane</h3>
+                <img src="images/kerkouane.jpg" alt="Site archéologique de Kerkouane">
+                <p>Catégorie : Culture</p>
+                <p>Durée : 2h30</p>
+                <p>Prix : 30 TND</p>
+                <button type="button">Voir les détails</button>
+                <a href="reservation.html">Réserver</a>
+            </article>
+            <article>
+                <h3>Randonnée découverte</h3>
+                <img src="images/randonnee.jpg" alt="Randonnée au Djebel Abderrahmane">
+                <p>Catégorie : Nature</p>
+                <p>Durée : 3h</p>
+                <p>Prix : 25 TND</p>
+                <button type="button">Voir les détails</button>
+                <a href="reservation.html">Réserver</a>
+            </article>
+            <article>
+                <h3>Circuit du littoral</h3>
+                <img src="images/littoral.jpg" alt="Littoral de Kélibia">
+                <p>Catégorie : Nature</p>
+                <p>Durée : 3h</p>
+                <p>Prix : 40 TND</p>
+                <button type="button">Voir les détails</button>
+                <a href="reservation.html">Réserver</a>
+            </article>
+            <article>
+                <h3>Peinture sur céramique</h3>
+                <img src="images/ceramique.jpg" alt="Peinture sur céramique">
+                <p>Catégorie : Artisanat</p>
+                <p>Durée : 2h</p>
+                <p>Prix : 25 TND</p>
+                <button type="button">Voir les détails</button>
+                <a href="reservation.html">Réserver</a>
+            </article>
+            <article>
+                <h3>Découverte d'un marché local</h3>
+                <img src="images/marche.jpg" alt="Marché local de Nabeul">
+                <p>Catégorie : Découverte</p>
+                <p>Durée : 1h30</p>
+                <p>Prix : 15 TND</p>
+                <button type="button">Voir les détails</button>
+                <a href="reservation.html">Réserver</a>
+            </article>
+            <article>
+                <h3>Promenade photographique</h3>
+                <img src="images/photo.jpg" alt="Promenade photographique à Hammamet">
+                <p>Catégorie : Découverte</p>
+                <p>Durée : 2h</p>
+                <p>Prix : 30 TND</p>
+                <button type="button">Voir les détails</button>
+                <a href="reservation.html">Réserver</a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Cap Bon Explorer - Tous droits réservés</p>
+        <a href="index.html">Accueil</a>
+        <a href="contact.html">Contact</a>
+    </footer>
+</body>
+</html>

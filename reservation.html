@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap Bon Explorer - Réservation</title>
+</head>
+<body>
+    <header>
+        <h1>Cap Bon Explorer</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="activites.html">Activités</a>
+            <a href="agenda.html">Agenda</a>
+            <a href="reservation.html">Réservation</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Simulateur de réservation</h2>
+            <p>
+                Remplissez le formulaire pour simuler
+                votre réservation et calculer le prix.
+            </p>
+        </section>
+        <section>
+            <h2>Informations personnelles</h2>
+            <form>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                <br><br>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+                <br><br>
+                <label for="email">Adresse e-mail :</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" required>
+                <br><br>
+                <label for="activite">Choisir une activité :</label>
+                <select id="activite" name="activite" required>
+                    <option value="">Choisir une activité</option>
+                    <option value="20">Découverte de la médina - 20 TND</option>
+                    <option value="35">Initiation à la poterie - 35 TND</option>
+                    <option value="30">Parcours de Kerkouane - 30 TND</option>
+                    <option value="25">Randonnée découverte - 25 TND</option>
+                    <option value="40">Circuit du littoral - 40 TND</option>
+                    <option value="25">Peinture sur céramique - 25 TND</option>
+                    <option value="15">Découverte du marché local - 15 TND</option>
+                    <option value="30">Promenade photographique - 30 TND</option>
+                </select>
+                <br><br>
+                <label for="date">Date souhaitée :</label>
+                <input type="date" id="date" name="date" required>
+                <br><br>
+                <label for="participants">Nombre de participants :</label>
+                <input type="number" id="participants"
+                       name="participants" min="1" max="6" value="1" required>
+                <br><br>
+                <p>Type de participation :</p>
+                <input type="radio" id="individuel"
+                       name="type" value="individuel" required>
+                <label for="individuel">Individuel</label>
+                <input type="radio" id="famille"
+                       name="type" value="famille">
+                <label for="famille">Famille</label>
+                <input type="radio" id="groupe"
+                       name="type" value="groupe">
+                <label for="groupe">Groupe</label>
+                <br><br>
+                <label for="commentaire">Commentaire :</label>
+                <br>
+                <textarea id="commentaire" name="commentaire"
+                          rows="4" cols="40"></textarea>
+
+                <br><br>
+                <input type="checkbox" id="conditions"
+                       name="conditions" required>
+                <label for="conditions">
+                    J'accepte les conditions de simulation.
+                </label>
+                <br><br>
+                <h2>Calcul du prix</h2>
+                <p>Prix unitaire : <span id="prixUnitaire">0</span> TND</p>
+                <p>Sous-total : <span id="sousTotal">0</span> TND</p>
+                <p>Remise : <span id="remise">0</span> TND</p>
+                <p>Total final : <span id="total">0</span> TND</p>
+                <br>
+                <button type="button" id="calculer">
+                    Calculer / Actualiser
+                </button>
+                <button type="submit">
+                    Valider la simulation
+                </button>
+                <button type="reset">
+                    Réinitialiser
+                </button>
+            </form>
+            <div id="resultat"></div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Cap Bon Explorer - Tous droits réservés</p>
+        <a href="index.html">Accueil</a>
+        <a href="contact.html">Contact</a>
+    </footer>
+</body>
+</html>

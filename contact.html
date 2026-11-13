@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Cap Bon Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Cap Bon Explorer</h1>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="activites.html">Activités</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="reservation.html">Réservation</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+<main>
+    <h2>Contactez-nous</h2>
+    <section>
+        <h3>Nous contacter</h3>
+        <p>Adresse : Avenue Habib Bourguiba, Nabeul</p>
+        <p>Téléphone : 72 000 000</p>
+        <p>Email : contact@capbonexplorer.tn</p>
+    </section>
+    <section>
+        <h3>Nos horaires</h3>
+        <ul>
+            <li>Lundi - Vendredi : 08h00 - 17h00</li>
+            <li>Samedi : 09h00 - 13h00</li>
+            <li>Dimanche : Fermé</li>
+        </ul>
+    </section>
+    <section>
+        <h3>Où nous trouver ?</h3>
+        <img src="images/nabeul.jpg" alt="Ville de Nabeul" width="400">
+    </section>
+    <section>
+        <h3>Questions fréquentes</h3>
+        <h4 onclick="afficher(1)">Comment réserver une activité ?</h4>
+        <p id="r1" style="display:none">
+            Il suffit de remplir le formulaire de réservation.
+        </p>
+        <h4 onclick="afficher(2)">Quels sont les tarifs ?</h4>
+        <p id="r2" style="display:none">
+            Les tarifs sont disponibles dans la page Activités.
+        </p>
+        <h4 onclick="afficher(3)">Peut-on venir en famille ?</h4>
+        <p id="r3" style="display:none">
+            Oui, les familles sont les bienvenues.
+        </p>
+        <h4 onclick="afficher(4)">La réservation est-elle réelle ?</h4>
+        <p id="r4" style="display:none">
+            Non, il s'agit d'une simulation.
+        </p>
+    </section>
+    <section>
+        <h3>Envoyez-nous un message</h3>
+        <form id="formulaire">
+            <fieldset>
+            <label>Nom :</label>
+            <input type="text" id="nom" required><br>
+            <label>Email :</label>
+            <input type="email" id="email" required><br>
+            <label>Sujet :</label>
+            <input type="text" id="sujet" required><br>
+            <label>Message :</label>
+            <textarea id="message" required></textarea><br>
+            <input type="submit" value="Envoyer">
+            </fieldset>
+        </form>
+        <p id="resultat"></p>
+    </section>
+</main>
+<footer>
+    <p>© 2026 Cap Bon Explorer</p>
+    <a href="index.html">Retour à l'accueil</a>
+</footer>
+</body>
+</html>
