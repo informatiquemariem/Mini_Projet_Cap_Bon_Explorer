@@ -47,17 +47,19 @@ for (let i = 0; i < boutons.length; i++) {
     boutons[i].onclick = function() {
         let carte = boutons[i].parentElement;
         let titre = carte.getElementsByTagName("h3")[0].textContent;
-        let image = carte.getElementsByTagName("img")[0].src;
         let infos = carte.getElementsByTagName("p");
         let categorie = infos[0].textContent;
         let duree = infos[1].textContent;
         let prix = infos[2].textContent;
+        let lieu = infos[3].textContent;
         alert(
             "Activité : " + titre + "\n" +
             categorie + "\n" +
+            "Lieu : " + lieu.substring(7) + "\n" +
             duree + "\n" +
             prix
         );
+
     };
 }
 }
