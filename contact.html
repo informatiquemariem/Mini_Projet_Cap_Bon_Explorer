@@ -17,7 +17,7 @@
         <a href="contact.html">Contact</a>
     </nav>
 </header>
-<main>
+<main class="contact">
     <h2>Contactez-nous</h2>
     <section>
         <h3>Nous contacter</h3>
@@ -37,7 +37,7 @@
         <h3>Où nous trouver ?</h3>
         <img src="images/nabeul.jpg" alt="Ville de Nabeul" width="400">
     </section>
-    <section>
+    <section class="detail">
         <h3>Questions fréquentes</h3>
         <h4 onclick="afficher(1)">Comment réserver une activité ?</h4>
         <p id="r1" style="display:none">
@@ -59,7 +59,7 @@
     <section>
         <h3>Envoyez-nous un message</h3>
         <form id="formulaire">
-            <fieldset>
+            
             <label>Nom :</label>
             <input type="text" id="nom" required><br>
             <label>Email :</label>
@@ -68,8 +68,8 @@
             <input type="text" id="sujet" required><br>
             <label>Message :</label>
             <textarea id="message" required></textarea><br>
-            <input type="submit" value="Envoyer">
-            </fieldset>
+           <button type="submit">Envoyer</button>
+           
         </form>
         <p id="resultat"></p>
     </section>

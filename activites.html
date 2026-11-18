@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cap Bon Explorer - Activités</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body >
     <header>
         <h1>Cap Bon Explorer</h1>
         <nav>
@@ -16,8 +17,8 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <main>
-        <section>
+    <main class="activites">
+        <section id="dec">
             <h2>Découvrez nos activités</h2>
             <p>
                 Explorez les différentes expériences touristiques
@@ -25,7 +26,7 @@
             </p>
         </section>
         <!-- Recherche et filtre -->
-        <section>
+        <section id="rech">
             <h2>Rechercher une activité</h2>
             <label for="recherche">Mot-clé :</label>
             <input type="text" id="recherche" placeholder="Rechercher une activité">
@@ -40,12 +41,12 @@
             <p>Nombre d'activités : <span id="compteur">8</span></p>
         </section>
         <!-- Catalogue des activités -->
-        <section>
+        <section class="cartes">
             <h2>Notre catalogue</h2>
             <p id="aucun-resultat" hidden>
                 Aucune activité trouvée.
             </p>
-            <article>
+            <article class="carte">
                 <h3>Découverte de la médina</h3>
                 <img src="images/medina.jpg" alt="Médina de Nabeul">
                 <p>Catégorie : Culture</p>
@@ -54,7 +55,7 @@
                 <button type="button">Voir les détails</button>
                 <a href="reservation.html">Réserver</a>
             </article>
-            <article>
+            <article class="carte">
                 <h3>Atelier d'initiation à la poterie</h3>
                 <img src="images/poterie.jpg" alt="Atelier de poterie">
                 <p>Catégorie : Artisanat</p>
@@ -63,7 +64,7 @@
                 <button type="button">Voir les détails</button>
                 <a href="reservation.html">Réserver</a>
             </article>
-            <article>
+            <article class="carte">
                 <h3>Parcours découverte de Kerkouane</h3>
                 <img src="images/kerkouane.jpg" alt="Site archéologique de Kerkouane">
                 <p>Catégorie : Culture</p>
@@ -72,7 +73,7 @@
                 <button type="button">Voir les détails</button>
                 <a href="reservation.html">Réserver</a>
             </article>
-            <article>
+            <article class="carte">
                 <h3>Randonnée découverte</h3>
                 <img src="images/randonnee.jpg" alt="Randonnée au Djebel Abderrahmane">
                 <p>Catégorie : Nature</p>
@@ -81,7 +82,7 @@
                 <button type="button">Voir les détails</button>
                 <a href="reservation.html">Réserver</a>
             </article>
-            <article>
+            <article class="carte">
                 <h3>Circuit du littoral</h3>
                 <img src="images/littoral.jpg" alt="Littoral de Kélibia">
                 <p>Catégorie : Nature</p>
@@ -90,7 +91,7 @@
                 <button type="button">Voir les détails</button>
                 <a href="reservation.html">Réserver</a>
             </article>
-            <article>
+            <article class="carte">
                 <h3>Peinture sur céramique</h3>
                 <img src="images/ceramique.jpg" alt="Peinture sur céramique">
                 <p>Catégorie : Artisanat</p>
@@ -99,7 +100,7 @@
                 <button type="button">Voir les détails</button>
                 <a href="reservation.html">Réserver</a>
             </article>
-            <article>
+            <article class="carte">
                 <h3>Découverte d'un marché local</h3>
                 <img src="images/marche.jpg" alt="Marché local de Nabeul">
                 <p>Catégorie : Découverte</p>
@@ -108,7 +109,7 @@
                 <button type="button">Voir les détails</button>
                 <a href="reservation.html">Réserver</a>
             </article>
-            <article>
+            <article class="carte">
                 <h3>Promenade photographique</h3>
                 <img src="images/photo.jpg" alt="Promenade photographique à Hammamet">
                 <p>Catégorie : Découverte</p>

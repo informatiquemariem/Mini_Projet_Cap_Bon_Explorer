@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cap Bon Explorer - Réservation</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header>
+<body class="reservation">
+    <header >
         <h1>Cap Bon Explorer</h1>
         <nav>
             <a href="index.html">Accueil</a>
@@ -59,16 +60,16 @@
                 <input type="number" id="participants"
                        name="participants" min="1" max="6" value="1" required>
                 <br><br>
-                <p>Type de participation :</p>
+                <label for="">Type de participation :</label>
+                <p><label for="individuel">Individuel</label>
                 <input type="radio" id="individuel"
-                       name="type" value="individuel" required>
-                <label for="individuel">Individuel</label>
+                       name="type" value="individuel" required></p>
+                <p><label for="famille">Famille</label>
                 <input type="radio" id="famille"
-                       name="type" value="famille">
-                <label for="famille">Famille</label>
+                       name="type" value="famille"></p>
+                <p><label for="groupe">Groupe</label>
                 <input type="radio" id="groupe"
-                       name="type" value="groupe">
-                <label for="groupe">Groupe</label>
+                       name="type" value="groupe"></p>
                 <br><br>
                 <label for="commentaire">Commentaire :</label>
                 <br>
