@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -5,14 +6,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cap Bon Explorer - Agenda</title>
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    
 </head>
+
 <body>
-    <header>
+
+    <!-- Header -->
+    <header class="text-center">
         <h1>Cap Bon Explorer</h1>
-        <nav>
+
+        <nav class="d-flex justify-content-center flex-wrap gap-3">
             <a href="index.html">Accueil</a>
             <a href="activites.html">Activités</a>
             <a href="agenda.html">Agenda</a>
@@ -20,98 +25,131 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <main class="agenda">
-        <section id="ag" >
+
+    <main class="agenda container">
+
+        <!-- Présentation -->
+        <section id="ag" class="p-4 text-center">
             <h2>Agenda des événements</h2>
+
             <p>
                 Découvrez notre programme d'activités et participez
                 aux différentes expériences proposées dans le Cap Bon.
             </p>
         </section>
-        <section>
-            
-            <h2>Nos prochains événements</h2>
-            <div class="tab">
 
-           
-            <table border="1">
-                <caption>Programme des événements Cap Bon Explorer</caption>
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Activité</th>
-                        <th>Heure</th>
-                        <th>Lieu</th>
-                        <th>Tarif</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>05/12/2026</td>
-                        <td>Promenade photographique</td>
-                        <td>09:30</td>
-                        <td>Hammamet</td>
-                        <td>30 TND</td>
-                    </tr>
-                    <tr>
-                        <td>12/12/2026</td>
-                        <td>Initiation à la poterie</td>
-                        <td>10:00</td>
-                        <td>Nabeul</td>
-                        <td>35 TND</td>
-                    </tr>
-                    <tr>
-                        <td>19/12/2026</td>
-                        <td>Randonnée découverte</td>
-                        <td>08:30</td>
-                        <td>Cap Bon</td>
-                        <td>25 TND</td>
-                    </tr>
-                    <tr>
-                        <td>09/01/2027</td>
-                        <td>Découverte de la médina</td>
-                        <td>10:00</td>
-                        <td>Nabeul</td>
-                        <td>20 TND</td>
-                    </tr>
-                    <tr>
-                        <td>16/01/2027</td>
-                        <td>Peinture sur céramique</td>
-                        <td>14:00</td>
-                        <td>Nabeul</td>
-                        <td>25 TND</td>
-                    </tr>
-                    <tr>
-                        <td>23/01/2027</td>
-                        <td>Découverte du marché local</td>
-                        <td>09:00</td>
-                        <td>Nabeul</td>
-                        <td>15 TND</td>
-                    </tr>
-                </tbody>
-            </table>
-             </div>
+        <!-- Tableau des événements -->
+        <section class="py-3">
+
+            <h2>Nos prochains événements</h2>
+
+            <div class="tab table-responsive">
+
+                <table class="table table-bordered table-hover text-center">
+
+                    <caption class="caption-top">
+                        Programme des événements Cap Bon Explorer
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Activité</th>
+                            <th scope="col">Heure</th>
+                            <th scope="col">Lieu</th>
+                            <th scope="col">Tarif</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>05/12/2026</td>
+                            <td>Promenade photographique</td>
+                            <td>09:30</td>
+                            <td>Hammamet</td>
+                            <td>30 TND</td>
+                        </tr>
+
+                        <tr>
+                            <td>12/12/2026</td>
+                            <td>Initiation à la poterie</td>
+                            <td>10:00</td>
+                            <td>Nabeul</td>
+                            <td>35 TND</td>
+                        </tr>
+
+                        <tr>
+                            <td>19/12/2026</td>
+                            <td>Randonnée découverte</td>
+                            <td>08:30</td>
+                            <td>Cap Bon</td>
+                            <td>25 TND</td>
+                        </tr>
+
+                        <tr>
+                            <td>09/01/2027</td>
+                            <td>Découverte de la médina</td>
+                            <td>10:00</td>
+                            <td>Nabeul</td>
+                            <td>20 TND</td>
+                        </tr>
+
+                        <tr>
+                            <td>16/01/2027</td>
+                            <td>Peinture sur céramique</td>
+                            <td>14:00</td>
+                            <td>Nabeul</td>
+                            <td>25 TND</td>
+                        </tr>
+
+                        <tr>
+                            <td>23/01/2027</td>
+                            <td>Découverte du marché local</td>
+                            <td>09:00</td>
+                            <td>Nabeul</td>
+                            <td>15 TND</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
         </section>
-        <section class="prochaines">
+
+        <!-- Prochaines expériences -->
+        <section class="prochaines p-3">
+
             <h2>Prochaines expériences</h2>
+
             <ul>
                 <li>
-                    <a href="activites.html">
+                    <a href="activites.html" class="btn btn-primary mb-2">
                         Découvrir toutes les activités
                     </a>
                 </li>
+
                 <li>
-                    <a href="reservation.html">
+                    <a href="reservation.html" class="btn btn-success">
                         Réserver une activité
                     </a>
                 </li>
             </ul>
+
         </section>
+
     </main>
-    <footer>
+
+    <!-- Footer -->
+    <footer class="text-center p-3">
+
         <p>© 2026 Cap Bon Explorer - Tous droits réservés</p>
+
         <a href="index.html">Accueil</a>
         <a href="contact.html">Contact</a>
+
     </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
