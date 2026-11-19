@@ -1,8 +1,9 @@
 
-// Récupération des éléments
 let formulaire = document.getElementById("formulaire");
 let resultat = document.getElementById("resultat");
-// Fonction pour afficher les réponses FAQ
+
+
+
 function afficher(numero) {
     let reponse = document.getElementById("r" + numero);
     if (reponse.style.display == "none") {
@@ -12,6 +13,7 @@ function afficher(numero) {
     }
 
 };
+
 
 formulaire.onsubmit = function() {
     let nom = document.getElementById("nom").value;
