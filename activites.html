@@ -1,17 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cap Bon Explorer - Activités</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/activites.js"></script>
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
-<body >
-    <header>
+
+<body>
+
+    <header class="text-center">
         <h1>Cap Bon Explorer</h1>
-        <nav>
+
+        <nav class="d-flex justify-content-center flex-wrap gap-3">
             <a href="index.html">Accueil</a>
             <a href="activites.html">Activités</a>
             <a href="agenda.html">Agenda</a>
@@ -19,121 +24,153 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <main class="activites">
-        <section id="dec">
+
+    <main class="activites container">
+
+        <!-- Présentation -->
+        <section id="dec" class="p-4 text-center">
             <h2>Découvrez nos activités</h2>
             <p>
                 Explorez les différentes expériences touristiques
                 proposées dans la région du Cap Bon.
             </p>
         </section>
+
         <!-- Recherche et filtre -->
-        <section id="rech">
+        <section id="rech" class="p-4">
+
             <h2>Rechercher une activité</h2>
-            <label for="recherche">Mot-clé :</label>
-            <input type="text" id="recherche" placeholder="Rechercher une activité">
-            <label for="categorie">Catégorie :</label>
-            <select id="categorie">
+
+            <label for="recherche" class="form-label">Mot-clé :</label>
+            <input type="text" id="recherche"
+                   class="form-control mb-3"
+                   placeholder="Rechercher une activité">
+
+            <label for="categorie" class="form-label">Catégorie :</label>
+            <select id="categorie" class="form-select mb-3">
                 <option value="Toutes">Toutes</option>
                 <option value="Culture">Culture</option>
                 <option value="Artisanat">Artisanat</option>
                 <option value="Nature">Nature</option>
                 <option value="Découverte">Découverte</option>
             </select>
+
             <p>Nombre d'activités : <span id="compteur">8</span></p>
+
         </section>
+
         <!-- Catalogue des activités -->
         <section class="cartes">
+
             <h2>Notre catalogue</h2>
+
             <p id="aucun-resultat" hidden>
                 Aucune activité trouvée.
             </p>
-            <article class="carte">
-                <h3>Découverte de la médina</h3>
-                <img src="images/medina.jpg" alt="Médina de Nabeul">
-                <p>Catégorie : Culture</p>
-                <p>Durée : 2h</p>
-                <p>Prix : 20 TND</p>
-                <p>Lieu : Nabeul</p>
-                <button type="button">Voir les détails</button>
-                <a href="reservation.html">Réserver</a>
-            </article>
-            <article class="carte">
-                <h3>Atelier d'initiation à la poterie</h3>
-                <img src="images/poterie.jpg" alt="Atelier de poterie">
-                <p>Catégorie : Artisanat</p>
-                <p>Durée : 1h30</p>
-                <p>Prix : 35 TND</p>
-                <p>Lieu : Nabeul</p>
-                <button type="button">Voir les détails</button>
-                <a href="reservation.html">Réserver</a>
-            </article>
-            <article class="carte">
-                <h3>Parcours découverte de Kerkouane</h3>
-                <img src="images/kerkouane.jpg" alt="Site archéologique de Kerkouane">
-                <p>Catégorie : Culture</p>
-                <p>Durée : 2h30</p>
-                <p>Prix : 30 TND</p>
-                <p>Lieu : kerkouane</p>
-                <button type="button">Voir les détails</button>
-                <a href="reservation.html">Réserver</a>
-            </article>
-            <article class="carte">
-                <h3>Randonnée découverte</h3>
-                <img src="images/randonnee.jpg" alt="Randonnée au Djebel Abderrahmane">
-                <p>Catégorie : Nature</p>
-                <p>Durée : 3h</p>
-                <p>Prix : 25 TND</p>
-                <p>Lieu : Djebel Abderrahmane</p>
-                <button type="button">Voir les détails</button>
-                <a href="reservation.html">Réserver</a>
-            </article>
-            <article class="carte">
-                <h3>Circuit du littoral</h3>
-                <img src="images/littoral.jpg" alt="Littoral de Kélibia">
-                <p>Catégorie : Nature</p>
-                <p>Durée : 3h</p>
-                <p>Prix : 40 TND</p>
-                <p>Lieu : Kelibia</p>
-                <button type="button">Voir les détails</button>
-                <a href="reservation.html">Réserver</a>
-            </article>
-            <article class="carte">
-                <h3>Peinture sur céramique</h3>
-                <img src="images/ceramique.jpg" alt="Peinture sur céramique">
-                <p>Catégorie : Artisanat</p>
-                <p>Durée : 2h</p>
-                <p>Prix : 25 TND</p>
-                <p>Lieu : Nabeul</p>
-                <button type="button">Voir les détails</button>
-                <a href="reservation.html">Réserver</a>
-            </article>
-            <article class="carte">
-                <h3>Découverte d'un marché local</h3>
-                <img src="images/marche.jpg" alt="Marché local de Nabeul">
-                <p>Catégorie : Découverte</p>
-                <p>Durée : 1h30</p>
-                <p>Prix : 15 TND</p>
-                <p>Lieu : Nabeul</p>
-                <button type="button">Voir les détails</button>
-                <a href="reservation.html">Réserver</a>
-            </article>
-            <article class="carte">
-                <h3>Promenade photographique</h3>
-                <img src="images/photo.jpg" alt="Promenade photographique à Hammamet">
-                <p>Catégorie : Découverte</p>
-                <p>Durée : 2h</p>
-                <p>Prix : 30 TND</p>
-                <p>Lieu : Hammamet</p>
-                <button type="button">Voir les détails</button>
-                <a href="reservation.html">Réserver</a>
-            </article>
+
+            <div class="row g-3">
+
+                <article class="carte col-12">
+                    <h3>Découverte de la médina</h3>
+                    <img src="images/medina.jpg" alt="Médina de Nabeul">
+                    <p>Catégorie : Culture</p>
+                    <p>Durée : 2h</p>
+                    <p>Prix : 20 TND</p>
+                    <p>Lieu : Nabeul</p>
+                    <button type="button" class="btn btn-primary">Voir les détails</button>
+                    <a href="reservation.html" class="btn btn-success">Réserver</a>
+                </article>
+
+                <article class="carte col-12">
+                    <h3>Atelier d'initiation à la poterie</h3>
+                    <img src="images/poterie.jpg" alt="Atelier de poterie">
+                    <p>Catégorie : Artisanat</p>
+                    <p>Durée : 1h30</p>
+                    <p>Prix : 35 TND</p>
+                    <p>Lieu : Nabeul</p>
+                    <button type="button" class="btn btn-primary">Voir les détails</button>
+                    <a href="reservation.html" class="btn btn-success">Réserver</a>
+                </article>
+
+                <article class="carte col-12">
+                    <h3>Parcours découverte de Kerkouane</h3>
+                    <img src="images/kerkouane.jpg" alt="Site archéologique de Kerkouane">
+                    <p>Catégorie : Culture</p>
+                    <p>Durée : 2h30</p>
+                    <p>Prix : 30 TND</p>
+                    <p>Lieu : Kerkouane</p>
+                    <button type="button" class="btn btn-primary">Voir les détails</button>
+                    <a href="reservation.html" class="btn btn-success">Réserver</a>
+                </article>
+
+                <article class="carte col-12">
+                    <h3>Randonnée découverte</h3>
+                    <img src="images/randonnee.jpg" alt="Randonnée au Djebel Abderrahmane">
+                    <p>Catégorie : Nature</p>
+                    <p>Durée : 3h</p>
+                    <p>Prix : 25 TND</p>
+                    <p>Lieu : Djebel Abderrahmane</p>
+                    <button type="button" class="btn btn-primary">Voir les détails</button>
+                    <a href="reservation.html" class="btn btn-success">Réserver</a>
+                </article>
+
+                <article class="carte col-12">
+                    <h3>Circuit du littoral</h3>
+                    <img src="images/littoral.jpg" alt="Littoral de Kélibia">
+                    <p>Catégorie : Nature</p>
+                    <p>Durée : 3h</p>
+                    <p>Prix : 40 TND</p>
+                    <p>Lieu : Kélibia</p>
+                    <button type="button" class="btn btn-primary">Voir les détails</button>
+                    <a href="reservation.html" class="btn btn-success">Réserver</a>
+                </article>
+
+                <article class="carte col-12">
+                    <h3>Peinture sur céramique</h3>
+                    <img src="images/ceramique.jpg" alt="Peinture sur céramique">
+                    <p>Catégorie : Artisanat</p>
+                    <p>Durée : 2h</p>
+                    <p>Prix : 25 TND</p>
+                    <p>Lieu : Nabeul</p>
+                    <button type="button" class="btn btn-primary">Voir les détails</button>
+                    <a href="reservation.html" class="btn btn-success">Réserver</a>
+                </article>
+
+                <article class="carte col-12">
+                    <h3>Découverte d'un marché local</h3>
+                    <img src="images/marche.jpg" alt="Marché local de Nabeul">
+                    <p>Catégorie : Découverte</p>
+                    <p>Durée : 1h30</p>
+                    <p>Prix : 15 TND</p>
+                    <p>Lieu : Nabeul</p>
+                    <button type="button" class="btn btn-primary">Voir les détails</button>
+                    <a href="reservation.html" class="btn btn-success">Réserver</a>
+                </article>
+
+                <article class="carte col-12">
+                    <h3>Promenade photographique</h3>
+                    <img src="images/photo.jpg" alt="Promenade photographique à Hammamet">
+                    <p>Catégorie : Découverte</p>
+                    <p>Durée : 2h</p>
+                    <p>Prix : 30 TND</p>
+                    <p>Lieu : Hammamet</p>
+                    <button type="button" class="btn btn-primary">Voir les détails</button>
+                    <a href="reservation.html" class="btn btn-success">Réserver</a>
+                </article>
+
+            </div>
         </section>
+
     </main>
-    <footer>
+
+    <footer class="text-center p-3">
         <p>© 2026 Cap Bon Explorer - Tous droits réservés</p>
         <a href="index.html">Accueil</a>
         <a href="contact.html">Contact</a>
     </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/activites.js"></script>
+
 </body>
 </html>
