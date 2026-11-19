@@ -13,23 +13,67 @@
 <body>
 
     <header class="text-center">
-        <h1>Cap Bon Explorer</h1>
 
-        <nav class="d-flex justify-content-center flex-wrap gap-3">
-            <a href="index.html">Accueil</a>
-            <a href="activites.html">Activités</a>
-            <a href="agenda.html">Agenda</a>
-            <a href="reservation.html">Réservation</a>
-            <a href="contact.html">Contact</a>
+        <h1 class="py-3 mb-0">Cap Bon Explorer</h1>
+
+        <!-- Navbar responsive -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+
+            <div class="container">
+
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Afficher le menu">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center"
+                    id="menuPrincipal">
+
+                    <ul class="navbar-nav gap-lg-3">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Accueil</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="activites.html">Activités</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="agenda.html">Agenda</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="reservation.html">Réservation</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
         </nav>
+
     </header>
 
-    <main class="container">
+    <main class="container py-4">
 
         <!-- Bannière -->
-        <section id="ba" class="p-4 text-center">
-            <h2 class="texte">Explorez les merveilles du Cap Bon</h2>
-            <p>
+        <section id="ba" class="p-4 text-center mb-4">
+
+            <h2 class="texte fw-bold">Explorez les merveilles du Cap Bon</h2>
+
+            <p class="lead">
                 Cap Bon Explorer vous invite à découvrir le patrimoine,
                 les savoir-faire et les paysages du Cap Bon.
                 Parcourez nos expériences, choisissez une activité
@@ -37,14 +81,16 @@
                 de réservation simple et transparente.
             </p>
 
-            <a href="activites.html" class="btn btn-primary">
+            <a href="activites.html" class="btn btn-primary mt-2">
                 Découvrir les activités
             </a>
+
         </section>
 
         <!-- Présentation -->
-        <section class="nous p-3">
-            <h2>Qui sommes-nous ?</h2>
+        <section class="nous p-3 mb-4">
+
+            <h2 class="fw-bold mb-3">Qui sommes-nous ?</h2>
 
             <p>
                 Cap Bon Explorer est une plateforme touristique
@@ -59,58 +105,100 @@
                 Nous souhaitons faciliter votre découverte de la
                 région grâce à un portail simple et accessible.
             </p>
+
         </section>
 
         <!-- Activités -->
         <section class="py-3">
-            <h2>Nos activités</h2>
 
-            <div class="cartes">
-                <ol class="row g-3">
+            <h2 class="fw-bold mb-4">Nos activités</h2>
 
-                    <li class="col-12 col-md-6 col-lg-4">
-                        <article class="car h-100">
-                            <h3>Découverte de la médina</h3>
-                            <img src="images/medina.jpg" alt="Médina de Nabeul">
-                            <p>Catégorie : Culture</p>
-                            <p>Prix : 20 TND</p>
-                            <a href="activites.html" class="btn btn-primary">
+            <div class="row g-3">
+
+                <!-- Carte 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <article class="card h-100 shadow-sm">
+
+                        <img src="images/medina.jpg" alt="Médina de Nabeul" class="img-fluid w-100 imgform">
+                        <div class="card-body d-flex flex-column">
+
+                            <h3 class="card-title h5">Découverte de la médina</h3>
+
+                            <p class="card-text">Catégorie : Culture</p>
+
+                            <p class="card-text">Prix : 20 TND</p>
+
+                            <a href="activites.html"
+                                class="btn btn-primary mt-auto align-self-start">
                                 Voir les activités
                             </a>
-                        </article>
-                    </li>
-                   
-                    <li class="col-12 col-md-6 col-lg-4">
-                        <article class="car h-100">
-                            <h3>Atelier de poterie</h3>
-                            <img src="images/poterie.jpg" alt="Atelier de poterie">
-                            <p>Catégorie : Artisanat</p>
-                            <p>Prix : 35 TND</p>
-                            <a href="activites.html" class="btn btn-primary">
-                                Voir les activités
-                            </a>
-                        </article>
-                    </li>
-                   
-                    <li class="col-12 col-md-6 col-lg-4">
-                        <article class="car h-100">
-                            <h3>Randonnée découverte</h3>
-                            <img src="images/randonnee.jpg" alt="Randonnée">
-                            <p>Catégorie : Nature</p>
-                            <p>Prix : 25 TND</p>
-                            <a href="activites.html" class="btn btn-primary">
-                                Voir les activités
-                            </a>
-                        </article>
-                    </li>
 
-                </ol>
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <!-- Carte 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <article class="card h-100 shadow-sm">
+
+                        <img src="images/poterie.jpg" alt="Médina de Nabeul" class="img-fluid w-100 imgform">
+                        <div class="card-body d-flex flex-column">
+
+                            <h3 class="card-title h5">Atelier de poterie</h3>
+
+                            <p class="card-text">Catégorie : Artisanat</p>
+
+                            <p class="card-text">Prix : 35 TND</p>
+
+                            <a href="activites.html"
+                                class="btn btn-primary mt-auto align-self-start">
+                                Voir les activités
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <!-- Carte 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <article class="card h-100 shadow-sm">
+
+                        <img src="images/randonnee.jpg" alt="Médina de Nabeul" class="img-fluid w-100 imgform">
+
+                        <div class="card-body d-flex flex-column">
+
+                            <h3 class="card-title h5">Randonnée découverte</h3>
+
+                            <p class="card-text">Catégorie : Nature</p>
+
+                            <p class="card-text">Prix : 25 TND</p>
+
+                            <a href="activites.html"
+                                class="btn btn-primary mt-auto align-self-start">
+                                Voir les activités
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
             </div>
+
         </section>
 
         <!-- Pourquoi le Cap Bon ? -->
-        <section class="pour p-3">
-            <h2>Pourquoi découvrir le Cap Bon ?</h2>
+        <section class="pour p-3 my-4">
+
+            <h2 class="fw-bold mb-3">Pourquoi découvrir le Cap Bon ?</h2>
 
             <ul>
                 <li>Des paysages magnifiques.</li>
@@ -118,26 +206,32 @@
                 <li>Des traditions artisanales.</li>
                 <li>Des expériences touristiques variées.</li>
             </ul>
+
         </section>
 
         <!-- Réservation -->
-        <section class="reservation p-4 text-center">
-            <h2>Prêt à découvrir le Cap Bon ?</h2>
+        <section class="reservation p-4 text-center my-4">
+
+            <h2 class="fw-bold mb-3">Prêt à découvrir le Cap Bon ?</h2>
 
             <a href="reservation.html" class="btn btn-success">
                 Simuler une réservation
             </a>
+
         </section>
 
     </main>
 
     <footer class="text-center p-3">
+
         <p>© 2026 Cap Bon Explorer - Tous droits réservés</p>
 
-        <a href="index.html">Accueil</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" class="mx-2">Accueil</a>
+        <a href="contact.html" class="mx-2">Contact</a>
+
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

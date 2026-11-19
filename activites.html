@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
@@ -16,161 +15,503 @@
     <header class="text-center">
         <h1>Cap Bon Explorer</h1>
 
-        <nav class="d-flex justify-content-center flex-wrap gap-3">
-            <a href="index.html">Accueil</a>
-            <a href="activites.html">Activités</a>
-            <a href="agenda.html">Agenda</a>
-            <a href="reservation.html">Réservation</a>
-            <a href="contact.html">Contact</a>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu"
+                    aria-controls="menu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="menu">
+
+                    <ul class="navbar-nav gap-3">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Accueil</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="activites.html">Activités</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="agenda.html">Agenda</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="reservation.html">Réservation</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
         </nav>
     </header>
+
 
     <main class="activites container">
 
         <!-- Présentation -->
         <section id="dec" class="p-4 text-center">
+
             <h2>Découvrez nos activités</h2>
-            <p>
+
+            <p class="lead">
                 Explorez les différentes expériences touristiques
                 proposées dans la région du Cap Bon.
             </p>
+
         </section>
+
 
         <!-- Recherche et filtre -->
         <section id="rech" class="p-4">
 
             <h2>Rechercher une activité</h2>
 
-            <label for="recherche" class="form-label">Mot-clé :</label>
-            <input type="text" id="recherche"
+            <label for="recherche" class="form-label">
+                Mot-clé :
+            </label>
+
+            <input type="text"
+                   id="recherche"
                    class="form-control mb-3"
                    placeholder="Rechercher une activité">
 
-            <label for="categorie" class="form-label">Catégorie :</label>
+            <label for="categorie" class="form-label">
+                Catégorie :
+            </label>
+
             <select id="categorie" class="form-select mb-3">
+
                 <option value="Toutes">Toutes</option>
                 <option value="Culture">Culture</option>
                 <option value="Artisanat">Artisanat</option>
                 <option value="Nature">Nature</option>
                 <option value="Découverte">Découverte</option>
+
             </select>
 
-            <p>Nombre d'activités : <span id="compteur">8</span></p>
+            <p>
+                Nombre d'activités :
+                <span id="compteur" class="badge text-bg-primary">8</span>
+            </p>
 
         </section>
+
 
         <!-- Catalogue des activités -->
         <section class="cartes">
 
             <h2>Notre catalogue</h2>
 
-            <p id="aucun-resultat" hidden>
+            <p id="aucun-resultat" class="alert alert-warning" hidden>
                 Aucune activité trouvée.
             </p>
 
             <div class="row g-3">
 
+
+                <!-- Activité 1 -->
                 <article class="carte col-12">
-                    <h3>Découverte de la médina</h3>
-                    <img src="images/medina.jpg" alt="Médina de Nabeul">
-                    <p>Catégorie : Culture</p>
-                    <p>Durée : 2h</p>
-                    <p>Prix : 20 TND</p>
-                    <p>Lieu : Nabeul</p>
-                    <button type="button" class="btn btn-primary">Voir les détails</button>
-                    <a href="reservation.html" class="btn btn-success">Réserver</a>
+
+                    <div class="card h-100">
+
+                        <img src="images/medina.jpg"
+                             class="img-fluid"
+                             alt="Médina de Nabeul">
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                Découverte de la médina
+                            </h3>
+
+                            <span class="badge text-bg-primary">
+                                Culture
+                            </span>
+
+                            <p class="card-text mt-2">
+                                Durée : 2h
+                            </p>
+
+                            <p class="card-text">
+                                Prix : 20 TND
+                            </p>
+
+                            <p class="card-text">
+                                Lieu : Nabeul
+                            </p>
+
+                            <button type="button" class="btn btn-primary">
+                                Voir les détails
+                            </button>
+
+                            <a href="reservation.html" class="btn btn-success">
+                                Réserver
+                            </a>
+
+                        </div>
+
+                    </div>
+
                 </article>
 
+
+                <!-- Activité 2 -->
                 <article class="carte col-12">
-                    <h3>Atelier d'initiation à la poterie</h3>
-                    <img src="images/poterie.jpg" alt="Atelier de poterie">
-                    <p>Catégorie : Artisanat</p>
-                    <p>Durée : 1h30</p>
-                    <p>Prix : 35 TND</p>
-                    <p>Lieu : Nabeul</p>
-                    <button type="button" class="btn btn-primary">Voir les détails</button>
-                    <a href="reservation.html" class="btn btn-success">Réserver</a>
+
+                    <div class="card h-100">
+
+                        <img src="images/poterie.jpg"
+                             class="img-fluid"
+                             alt="Atelier de poterie">
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                Atelier d'initiation à la poterie
+                            </h3>
+
+                            <span class="badge text-bg-warning">
+                                Artisanat
+                            </span>
+
+                            <p class="card-text mt-2">
+                                Durée : 1h30
+                            </p>
+
+                            <p class="card-text">
+                                Prix : 35 TND
+                            </p>
+
+                            <p class="card-text">
+                                Lieu : Nabeul
+                            </p>
+
+                            <button type="button" class="btn btn-primary">
+                                Voir les détails
+                            </button>
+
+                            <a href="reservation.html" class="btn btn-success">
+                                Réserver
+                            </a>
+
+                        </div>
+
+                    </div>
+
                 </article>
 
+
+                <!-- Activité 3 -->
                 <article class="carte col-12">
-                    <h3>Parcours découverte de Kerkouane</h3>
-                    <img src="images/kerkouane.jpg" alt="Site archéologique de Kerkouane">
-                    <p>Catégorie : Culture</p>
-                    <p>Durée : 2h30</p>
-                    <p>Prix : 30 TND</p>
-                    <p>Lieu : Kerkouane</p>
-                    <button type="button" class="btn btn-primary">Voir les détails</button>
-                    <a href="reservation.html" class="btn btn-success">Réserver</a>
+
+                    <div class="card h-100">
+
+                        <img src="images/kerkouane.jpg"
+                             class="img-fluid"
+                             alt="Site archéologique de Kerkouane">
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                Parcours découverte de Kerkouane
+                            </h3>
+
+                            <span class="badge text-bg-primary">
+                                Culture
+                            </span>
+
+                            <p class="card-text mt-2">
+                                Durée : 2h30
+                            </p>
+
+                            <p class="card-text">
+                                Prix : 30 TND
+                            </p>
+
+                            <p class="card-text">
+                                Lieu : Kerkouane
+                            </p>
+
+                            <button type="button" class="btn btn-primary">
+                                Voir les détails
+                            </button>
+
+                            <a href="reservation.html" class="btn btn-success">
+                                Réserver
+                            </a>
+
+                        </div>
+
+                    </div>
+
                 </article>
 
+
+                <!-- Activité 4 -->
                 <article class="carte col-12">
-                    <h3>Randonnée découverte</h3>
-                    <img src="images/randonnee.jpg" alt="Randonnée au Djebel Abderrahmane">
-                    <p>Catégorie : Nature</p>
-                    <p>Durée : 3h</p>
-                    <p>Prix : 25 TND</p>
-                    <p>Lieu : Djebel Abderrahmane</p>
-                    <button type="button" class="btn btn-primary">Voir les détails</button>
-                    <a href="reservation.html" class="btn btn-success">Réserver</a>
+
+                    <div class="card h-100">
+
+                        <img src="images/randonnee.jpg"
+                             class="img-fluid"
+                             alt="Randonnée au Djebel Abderrahmane">
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                Randonnée découverte
+                            </h3>
+
+                            <span class="badge text-bg-success">
+                                Nature
+                            </span>
+
+                            <p class="card-text mt-2">
+                                Durée : 3h
+                            </p>
+
+                            <p class="card-text">
+                                Prix : 25 TND
+                            </p>
+
+                            <p class="card-text">
+                                Lieu : Djebel Abderrahmane
+                            </p>
+
+                            <button type="button" class="btn btn-primary">
+                                Voir les détails
+                            </button>
+
+                            <a href="reservation.html" class="btn btn-success">
+                                Réserver
+                            </a>
+
+                        </div>
+
+                    </div>
+
                 </article>
 
+
+                <!-- Activité 5 -->
                 <article class="carte col-12">
-                    <h3>Circuit du littoral</h3>
-                    <img src="images/littoral.jpg" alt="Littoral de Kélibia">
-                    <p>Catégorie : Nature</p>
-                    <p>Durée : 3h</p>
-                    <p>Prix : 40 TND</p>
-                    <p>Lieu : Kélibia</p>
-                    <button type="button" class="btn btn-primary">Voir les détails</button>
-                    <a href="reservation.html" class="btn btn-success">Réserver</a>
+
+                    <div class="card h-100">
+
+                        <img src="images/littoral.jpg"
+                             class="img-fluid"
+                             alt="Littoral de Kélibia">
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                Circuit du littoral
+                            </h3>
+
+                            <span class="badge text-bg-success">
+                                Nature
+                            </span>
+
+                            <p class="card-text mt-2">
+                                Durée : 3h
+                            </p>
+
+                            <p class="card-text">
+                                Prix : 40 TND
+                            </p>
+
+                            <p class="card-text">
+                                Lieu : Kélibia
+                            </p>
+
+                            <button type="button" class="btn btn-primary">
+                                Voir les détails
+                            </button>
+
+                            <a href="reservation.html" class="btn btn-success">
+                                Réserver
+                            </a>
+
+                        </div>
+
+                    </div>
+
                 </article>
 
+
+                <!-- Activité 6 -->
                 <article class="carte col-12">
-                    <h3>Peinture sur céramique</h3>
-                    <img src="images/ceramique.jpg" alt="Peinture sur céramique">
-                    <p>Catégorie : Artisanat</p>
-                    <p>Durée : 2h</p>
-                    <p>Prix : 25 TND</p>
-                    <p>Lieu : Nabeul</p>
-                    <button type="button" class="btn btn-primary">Voir les détails</button>
-                    <a href="reservation.html" class="btn btn-success">Réserver</a>
+
+                    <div class="card h-100">
+
+                        <img src="images/ceramique.jpg"
+                             class="img-fluid"
+                             alt="Peinture sur céramique">
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                Peinture sur céramique
+                            </h3>
+
+                            <span class="badge text-bg-warning">
+                                Artisanat
+                            </span>
+
+                            <p class="card-text mt-2">
+                                Durée : 2h
+                            </p>
+
+                            <p class="card-text">
+                                Prix : 25 TND
+                            </p>
+
+                            <p class="card-text">
+                                Lieu : Nabeul
+                            </p>
+
+                            <button type="button" class="btn btn-primary">
+                                Voir les détails
+                            </button>
+
+                            <a href="reservation.html" class="btn btn-success">
+                                Réserver
+                            </a>
+
+                        </div>
+
+                    </div>
+
                 </article>
 
+
+                <!-- Activité 7 -->
                 <article class="carte col-12">
-                    <h3>Découverte d'un marché local</h3>
-                    <img src="images/marche.jpg" alt="Marché local de Nabeul">
-                    <p>Catégorie : Découverte</p>
-                    <p>Durée : 1h30</p>
-                    <p>Prix : 15 TND</p>
-                    <p>Lieu : Nabeul</p>
-                    <button type="button" class="btn btn-primary">Voir les détails</button>
-                    <a href="reservation.html" class="btn btn-success">Réserver</a>
+
+                    <div class="card h-100">
+
+                        <img src="images/marche.jpg"
+                             class="img-fluid"
+                             alt="Marché local de Nabeul">
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                Découverte d'un marché local
+                            </h3>
+
+                            <span class="badge text-bg-info">
+                                Découverte
+                            </span>
+
+                            <p class="card-text mt-2">
+                                Durée : 1h30
+                            </p>
+
+                            <p class="card-text">
+                                Prix : 15 TND
+                            </p>
+
+                            <p class="card-text">
+                                Lieu : Nabeul
+                            </p>
+
+                            <button type="button" class="btn btn-primary">
+                                Voir les détails
+                            </button>
+
+                            <a href="reservation.html" class="btn btn-success">
+                                Réserver
+                            </a>
+
+                        </div>
+
+                    </div>
+
                 </article>
 
+
+                <!-- Activité 8 -->
                 <article class="carte col-12">
-                    <h3>Promenade photographique</h3>
-                    <img src="images/photo.jpg" alt="Promenade photographique à Hammamet">
-                    <p>Catégorie : Découverte</p>
-                    <p>Durée : 2h</p>
-                    <p>Prix : 30 TND</p>
-                    <p>Lieu : Hammamet</p>
-                    <button type="button" class="btn btn-primary">Voir les détails</button>
-                    <a href="reservation.html" class="btn btn-success">Réserver</a>
+
+                    <div class="card h-100">
+
+                        <img src="images/photo.jpg"
+                             class="img-fluid"
+                             alt="Promenade photographique à Hammamet">
+
+                        <div class="card-body">
+
+                            <h3 class="card-title">
+                                Promenade photographique
+                            </h3>
+
+                            <span class="badge text-bg-info">
+                                Découverte
+                            </span>
+
+                            <p class="card-text mt-2">
+                                Durée : 2h
+                            </p>
+
+                            <p class="card-text">
+                                Prix : 30 TND
+                            </p>
+
+                            <p class="card-text">
+                                Lieu : Hammamet
+                            </p>
+
+                            <button type="button" class="btn btn-primary">
+                                Voir les détails
+                            </button>
+
+                            <a href="reservation.html" class="btn btn-success">
+                                Réserver
+                            </a>
+
+                        </div>
+
+                    </div>
+
                 </article>
+
 
             </div>
+
         </section>
 
     </main>
 
+
     <footer class="text-center p-3">
+
         <p>© 2026 Cap Bon Explorer - Tous droits réservés</p>
+
         <a href="index.html">Accueil</a>
         <a href="contact.html">Contact</a>
+
     </footer>
+
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/activites.js"></script>
 
 </body>
+
 </html>

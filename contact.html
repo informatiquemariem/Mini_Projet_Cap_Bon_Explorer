@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,113 +12,216 @@
 
 <body>
 
-<header class="text-center">
-    <h1>Cap Bon Explorer</h1>
+    <header class="text-center">
 
-    <nav class="d-flex justify-content-center flex-wrap gap-3 p-2">
-        <a href="index.html">Accueil</a>
-        <a href="activites.html">Activités</a>
-        <a href="agenda.html">Agenda</a>
-        <a href="reservation.html">Réservation</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+        <h1>Cap Bon Explorer</h1>
 
-<main class="contact container py-4">
+        <nav class="navbar navbar-expand-lg navbar-dark">
 
-    <h2 class="text-center mb-4">Contactez-nous</h2>
+            <div class="container">
 
-    <section class="p-3 mb-3">
-        <h3>Nous contacter</h3>
-        <p>Adresse : Avenue Habib Bourguiba, Nabeul</p>
-        <p>Téléphone : 72 000 000</p>
-        <p>Email : contact@capbonexplorer.tn</p>
-    </section>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu"
+                    aria-controls="menu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
 
-    <section class="p-3 mb-3">
-        <h3>Nos horaires</h3>
-        <ul>
-            <li>Lundi - Vendredi : 08h00 - 17h00</li>
-            <li>Samedi : 09h00 - 13h00</li>
-            <li>Dimanche : Fermé</li>
-        </ul>
-    </section>
+                    <span class="navbar-toggler-icon"></span>
 
-    <section class="p-3 mb-3">
-        <h3>Où nous trouver ?</h3>
-        <img src="images/nabeul.jpg"
-             alt="Ville de Nabeul"
-             class="img-fluid rounded"
-             width="400">
-    </section>
+                </button>
 
-    <section class="detail p-3 mb-3">
-        <h3>Questions fréquentes</h3>
+                <div class="collapse navbar-collapse justify-content-center" id="menu">
 
-        <h4 onclick="afficher(1)">Comment réserver une activité ?</h4>
-        <p id="r1" style="display:none">
-            Il suffit de remplir le formulaire de réservation.
-        </p>
+                    <ul class="navbar-nav gap-3">
 
-        <h4 onclick="afficher(2)">Quels sont les tarifs ?</h4>
-        <p id="r2" style="display:none">
-            Les tarifs sont disponibles dans la page Activités.
-        </p>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Accueil</a>
+                        </li>
 
-        <h4 onclick="afficher(3)">Peut-on venir en famille ?</h4>
-        <p id="r3" style="display:none">
-            Oui, les familles sont les bienvenues.
-        </p>
+                        <li class="nav-item">
+                            <a class="nav-link" href="activites.html">Activités</a>
+                        </li>
 
-        <h4 onclick="afficher(4)">La réservation est-elle réelle ?</h4>
-        <p id="r4" style="display:none">
-            Non, il s'agit d'une simulation.
-        </p>
-    </section>
+                        <li class="nav-item">
+                            <a class="nav-link" href="agenda.html">Agenda</a>
+                        </li>
 
-    <section class="p-3 mb-3">
-        <h3>Envoyez-nous un message</h3>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reservation.html">Réservation</a>
+                        </li>
 
-        <form id="formulaire">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html">Contact</a>
+                        </li>
 
-            <div class="mb-3">
-                <label for="nom" class="form-label">Nom :</label>
-                <input type="text" id="nom" class="form-control" required>
+                    </ul>
+
+                </div>
+
             </div>
 
-            <div class="mb-3">
-                <label for="email" class="form-label">Email :</label>
-                <input type="email" id="email" class="form-control" required>
-            </div>
+        </nav>
 
-            <div class="mb-3">
-                <label for="sujet" class="form-label">Sujet :</label>
-                <input type="text" id="sujet" class="form-control" required>
-            </div>
+    </header>
 
-            <div class="mb-3">
-                <label for="message" class="form-label">Message :</label>
-                <textarea id="message" class="form-control" rows="4" required></textarea>
-            </div>
 
-            <button type="submit" class="btn btn-success">
-                Envoyer
-            </button>
+    <main class="contact container py-4">
 
-        </form>
+        <h2 class="text-center mb-4">Contactez-nous</h2>
 
-        <p id="resultat" class="mt-3"></p>
-    </section>
 
-</main>
+        <section class="p-3 mb-4">
 
-<footer class="text-center p-3">
-    <p>© 2026 Cap Bon Explorer</p>
-    <a href="index.html">Retour à l'accueil</a>
-</footer>
+            <h3 class="mb-3">Nous contacter</h3>
 
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/app.js"></script>
+            <p>Adresse : Avenue Habib Bourguiba, Nabeul</p>
+            <p>Téléphone : 72 000 000</p>
+            <p>Email : contact@capbonexplorer.tn</p>
+
+        </section>
+
+
+        <section class="p-3 mb-4">
+
+            <h3 class="mb-3">Nos horaires</h3>
+
+            <ul class="list-group">
+
+                <li class="list-group-item">
+                    Lundi - Vendredi : 08h00 - 17h00
+                </li>
+
+                <li class="list-group-item">
+                    Samedi : 09h00 - 13h00
+                </li>
+
+                <li class="list-group-item">
+                    Dimanche : Fermé
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <section class="p-3 mb-4">
+
+            <h3 class="mb-3">Où nous trouver ?</h3>
+
+            <img src="images/nabeul.jpg"
+                alt="Ville de Nabeul"
+                class="img-fluid rounded"
+                width="400">
+
+        </section>
+
+
+        <section class="detail p-3 mb-4">
+
+            <h3 class="mb-3">Questions fréquentes</h3>
+
+            <h4 onclick="afficher(1)">Comment réserver une activité ?</h4>
+
+            <p id="r1" style="display:none">
+                Il suffit de remplir le formulaire de réservation.
+            </p>
+
+
+            <h4 onclick="afficher(2)">Quels sont les tarifs ?</h4>
+
+            <p id="r2" style="display:none">
+                Les tarifs sont disponibles dans la page Activités.
+            </p>
+
+
+            <h4 onclick="afficher(3)">Peut-on venir en famille ?</h4>
+
+            <p id="r3" style="display:none">
+                Oui, les familles sont les bienvenues.
+            </p>
+
+
+            <h4 onclick="afficher(4)">La réservation est-elle réelle ?</h4>
+
+            <p id="r4" style="display:none">
+                Non, il s'agit d'une simulation.
+            </p>
+
+        </section>
+
+
+        <section class="p-3 mb-4">
+
+            <h3 class="mb-3">Envoyez-nous un message</h3>
+
+            <form id="formulaire">
+
+                <div class="mb-3">
+
+                    <label for="nom" class="form-label">Nom :</label>
+
+                    <input type="text" id="nom"
+                        class="form-control" required>
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label for="email" class="form-label">Email :</label>
+
+                    <input type="email" id="email"
+                        class="form-control" required>
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label for="sujet" class="form-label">Sujet :</label>
+
+                    <input type="text" id="sujet"
+                        class="form-control" required>
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label for="message" class="form-label">Message :</label>
+
+                    <textarea id="message"
+                        class="form-control"
+                        rows="4" required></textarea>
+
+                </div>
+
+
+                <button type="submit" class="btn btn-success">
+                    Envoyer
+                </button>
+
+            </form>
+
+            <p id="resultat" class="mt-3"></p>
+
+        </section>
+
+    </main>
+
+
+    <footer class="text-center p-3">
+
+        <p>© 2026 Cap Bon Explorer</p>
+
+        <a href="index.html">Retour à l'accueil</a>
+
+    </footer>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 </html>

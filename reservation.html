@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,65 +12,136 @@
 
 <body class="reservation">
 
+    <!-- Header -->
     <header class="text-center">
         <h1>Cap Bon Explorer</h1>
 
-        <nav class="d-flex justify-content-center flex-wrap gap-3 p-2">
-            <a href="index.html">Accueil</a>
-            <a href="activites.html">Activités</a>
-            <a href="agenda.html">Agenda</a>
-            <a href="reservation.html">Réservation</a>
-            <a href="contact.html">Contact</a>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu"
+                    aria-controls="menu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="menu">
+
+                    <ul class="navbar-nav gap-3">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Accueil</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="activites.html">Activités</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="agenda.html">Agenda</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="reservation.html">Réservation</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
         </nav>
     </header>
 
+
+
     <main class="container py-4">
 
+        <!-- Présentation -->
         <section class="p-4 text-center mb-4">
+
             <h2>Simulateur de réservation</h2>
-            <p>
+
+            <p class="lead">
                 Remplissez le formulaire pour simuler
                 votre réservation et calculer le prix.
             </p>
+
         </section>
 
+
+        <!-- Formulaire -->
         <section class="p-4">
 
             <h2>Informations personnelles</h2>
 
             <form>
 
-                <div class="mb-3">
-                    <label for="nom" class="form-label">Nom :</label>
-                    <input type="text" id="nom" name="nom"
-                           class="form-control" required>
+                <div class="row">
+
+                    <div class="col-12 col-md-6 mb-3">
+
+                        <label for="nom" class="form-label">Nom :</label>
+
+                        <input type="text" id="nom" name="nom"
+                               class="form-control" required>
+
+                    </div>
+
+
+                    <div class="col-12 col-md-6 mb-3">
+
+                        <label for="prenom" class="form-label">Prénom :</label>
+
+                        <input type="text" id="prenom" name="prenom"
+                               class="form-control" required>
+
+                    </div>
+
                 </div>
 
-                <div class="mb-3">
-                    <label for="prenom" class="form-label">Prénom :</label>
-                    <input type="text" id="prenom" name="prenom"
-                           class="form-control" required>
+
+                <div class="row">
+
+                    <div class="col-12 col-md-6 mb-3">
+
+                        <label for="email" class="form-label">Adresse e-mail :</label>
+
+                        <input type="email" id="email" name="email"
+                               class="form-control" required>
+
+                    </div>
+
+
+                    <div class="col-12 col-md-6 mb-3">
+
+                        <label for="telephone" class="form-label">Téléphone :</label>
+
+                        <input type="tel" id="telephone" name="telephone"
+                               class="form-control" required>
+
+                    </div>
+
                 </div>
 
-                <div class="mb-3">
-                    <label for="email" class="form-label">Adresse e-mail :</label>
-                    <input type="email" id="email" name="email"
-                           class="form-control" required>
-                </div>
 
                 <div class="mb-3">
-                    <label for="telephone" class="form-label">Téléphone :</label>
-                    <input type="tel" id="telephone" name="telephone"
-                           class="form-control" required>
-                </div>
 
-                <div class="mb-3">
                     <label for="activite" class="form-label">
                         Choisir une activité :
                     </label>
 
                     <select id="activite" name="activite"
                             class="form-select" required>
+
                         <option value="">Choisir une activité</option>
                         <option value="20">Découverte de la médina - 20 TND</option>
                         <option value="35">Initiation à la poterie - 35 TND</option>
@@ -80,81 +151,156 @@
                         <option value="25">Peinture sur céramique - 25 TND</option>
                         <option value="15">Découverte du marché local - 15 TND</option>
                         <option value="30">Promenade photographique - 30 TND</option>
+
                     </select>
+
                 </div>
 
-                <div class="mb-3">
-                    <label for="date" class="form-label">Date souhaitée :</label>
-                    <input type="date" id="date" name="date"
-                           class="form-control" required>
+
+                <div class="row">
+
+                    <div class="col-12 col-md-6 mb-3">
+
+                        <label for="date" class="form-label">
+                            Date souhaitée :
+                        </label>
+
+                        <input type="date" id="date" name="date"
+                               class="form-control" required>
+
+                    </div>
+
+
+                    <div class="col-12 col-md-6 mb-3">
+
+                        <label for="participants" class="form-label">
+                            Nombre de participants :
+                        </label>
+
+                        <input type="number" id="participants"
+                               name="participants" min="1" max="6"
+                               value="1" class="form-control" required>
+
+                    </div>
+
                 </div>
 
+
+                <!-- Type de participation -->
                 <div class="mb-3">
-                    <label for="participants" class="form-label">
-                        Nombre de participants :
+
+                    <label class="form-label">
+                        Type de participation :
                     </label>
-                    <input type="number" id="participants"
-                           name="participants" min="1" max="6"
-                           value="1" class="form-control" required>
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">Type de participation :</label>
 
                     <div class="form-check">
+
                         <input type="radio" id="individuel"
                                name="type" value="individuel"
                                class="form-check-input" required>
+
                         <label for="individuel" class="form-check-label">
                             Individuel
                         </label>
+
                     </div>
 
+
                     <div class="form-check">
+
                         <input type="radio" id="famille"
                                name="type" value="famille"
                                class="form-check-input">
+
                         <label for="famille" class="form-check-label">
                             Famille
                         </label>
+
                     </div>
 
+
                     <div class="form-check">
+
                         <input type="radio" id="groupe"
                                name="type" value="groupe"
                                class="form-check-input">
+
                         <label for="groupe" class="form-check-label">
                             Groupe
                         </label>
+
                     </div>
+
                 </div>
 
+
+                <!-- Commentaire -->
                 <div class="mb-3">
+
                     <label for="commentaire" class="form-label">
                         Commentaire :
                     </label>
+
                     <textarea id="commentaire" name="commentaire"
                               rows="4" class="form-control"></textarea>
+
                 </div>
 
+
+                <!-- Conditions -->
                 <div class="form-check mb-4">
+
                     <input type="checkbox" id="conditions"
                            name="conditions" class="form-check-input" required>
+
                     <label for="conditions" class="form-check-label">
                         J'accepte les conditions de simulation.
                     </label>
+
                 </div>
 
+
+                <!-- Calcul du prix -->
                 <h2>Calcul du prix</h2>
 
-                <div class="p-3 mb-3">
-                    <p>Prix unitaire : <span id="prixUnitaire">0</span> TND</p>
-                    <p>Sous-total : <span id="sousTotal">0</span> TND</p>
-                    <p>Remise : <span id="remise">0</span> TND</p>
-                    <p class="fw-bold">Total final : <span id="total">0</span> TND</p>
+                <div class="card mb-3">
+
+                    <div class="card-body">
+
+                        <p>
+                            Prix unitaire :
+                            <span id="prixUnitaire" class="badge text-bg-primary">0</span>
+                            TND
+                        </p>
+
+                        <p>
+                            Sous-total :
+                            <span id="sousTotal" class="badge text-bg-primary">0</span>
+                            TND
+                        </p>
+
+                        <p>
+                            Remise :
+                            <span id="remise" class="badge text-bg-warning">0</span>
+                            TND
+                        </p>
+
+                        <hr>
+
+                        <p class="fw-bold">
+                            Total final :
+                            <span id="total" class="badge text-bg-success">0</span>
+                            TND
+                        </p>
+
+                    </div>
+
                 </div>
 
+
+                <!-- Boutons -->
                 <div class="d-flex flex-wrap gap-2">
+
                     <button type="button" id="calculer"
                             class="btn btn-primary">
                         Calculer / Actualiser
@@ -167,9 +313,11 @@
                     <button type="reset" class="btn btn-secondary">
                         Réinitialiser
                     </button>
+
                 </div>
 
             </form>
+
 
             <div id="resultat" class="mt-3"></div>
 
@@ -177,14 +325,21 @@
 
     </main>
 
+
+    <!-- Footer -->
     <footer class="text-center p-3">
+
         <p>© 2026 Cap Bon Explorer - Tous droits réservés</p>
+
         <a href="index.html">Accueil</a>
         <a href="contact.html">Contact</a>
+
     </footer>
+
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/reservation.js"></script>
 
 </body>
+
 </html>

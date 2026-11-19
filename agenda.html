@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -15,28 +14,73 @@
 
     <!-- Header -->
     <header class="text-center">
+
         <h1>Cap Bon Explorer</h1>
 
-        <nav class="d-flex justify-content-center flex-wrap gap-3">
-            <a href="index.html">Accueil</a>
-            <a href="activites.html">Activités</a>
-            <a href="agenda.html">Agenda</a>
-            <a href="reservation.html">Réservation</a>
-            <a href="contact.html">Contact</a>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+
+            <div class="container">
+
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu"
+                    aria-controls="menu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="menu">
+
+                    <ul class="navbar-nav gap-3">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Accueil</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="activites.html">Activités</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="agenda.html">Agenda</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="reservation.html">Réservation</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
         </nav>
+
     </header>
+
 
     <main class="agenda container">
 
         <!-- Présentation -->
         <section id="ag" class="p-4 text-center">
+
             <h2>Agenda des événements</h2>
 
-            <p>
+            <p class="lead">
                 Découvrez notre programme d'activités et participez
                 aux différentes expériences proposées dans le Cap Bon.
             </p>
+
         </section>
+
 
         <!-- Tableau des événements -->
         <section class="py-3">
@@ -45,13 +89,14 @@
 
             <div class="tab table-responsive">
 
-                <table class="table table-bordered table-hover text-center">
+                <table class="table table-bordered table-hover table-striped text-center align-middle">
 
                     <caption class="caption-top">
                         Programme des événements Cap Bon Explorer
                     </caption>
 
-                    <thead>
+                    <thead class="table-primary">
+
                         <tr>
                             <th scope="col">Date</th>
                             <th scope="col">Activité</th>
@@ -59,15 +104,19 @@
                             <th scope="col">Lieu</th>
                             <th scope="col">Tarif</th>
                         </tr>
+
                     </thead>
 
                     <tbody>
+
                         <tr>
                             <td>05/12/2026</td>
                             <td>Promenade photographique</td>
                             <td>09:30</td>
                             <td>Hammamet</td>
-                            <td>30 TND</td>
+                            <td>
+                                <span class="badge text-bg-success">30 TND</span>
+                            </td>
                         </tr>
 
                         <tr>
@@ -75,7 +124,9 @@
                             <td>Initiation à la poterie</td>
                             <td>10:00</td>
                             <td>Nabeul</td>
-                            <td>35 TND</td>
+                            <td>
+                                <span class="badge text-bg-success">35 TND</span>
+                            </td>
                         </tr>
 
                         <tr>
@@ -83,7 +134,9 @@
                             <td>Randonnée découverte</td>
                             <td>08:30</td>
                             <td>Cap Bon</td>
-                            <td>25 TND</td>
+                            <td>
+                                <span class="badge text-bg-success">25 TND</span>
+                            </td>
                         </tr>
 
                         <tr>
@@ -91,7 +144,9 @@
                             <td>Découverte de la médina</td>
                             <td>10:00</td>
                             <td>Nabeul</td>
-                            <td>20 TND</td>
+                            <td>
+                                <span class="badge text-bg-success">20 TND</span>
+                            </td>
                         </tr>
 
                         <tr>
@@ -99,7 +154,9 @@
                             <td>Peinture sur céramique</td>
                             <td>14:00</td>
                             <td>Nabeul</td>
-                            <td>25 TND</td>
+                            <td>
+                                <span class="badge text-bg-success">25 TND</span>
+                            </td>
                         </tr>
 
                         <tr>
@@ -107,37 +164,41 @@
                             <td>Découverte du marché local</td>
                             <td>09:00</td>
                             <td>Nabeul</td>
-                            <td>15 TND</td>
+                            <td>
+                                <span class="badge text-bg-success">15 TND</span>
+                            </td>
                         </tr>
+
                     </tbody>
 
                 </table>
 
             </div>
+
         </section>
+
 
         <!-- Prochaines expériences -->
         <section class="prochaines p-3">
 
             <h2>Prochaines expériences</h2>
 
-            <ul>
-                <li>
-                    <a href="activites.html" class="btn btn-primary mb-2">
-                        Découvrir toutes les activités
-                    </a>
-                </li>
+            <div class="d-flex flex-column flex-md-row gap-3">
 
-                <li>
-                    <a href="reservation.html" class="btn btn-success">
-                        Réserver une activité
-                    </a>
-                </li>
-            </ul>
+                <a href="activites.html" class="btn btn-primary">
+                    Découvrir toutes les activités
+                </a>
+
+                <a href="reservation.html" class="btn btn-success">
+                    Réserver une activité
+                </a>
+
+            </div>
 
         </section>
 
     </main>
+
 
     <!-- Footer -->
     <footer class="text-center p-3">
@@ -149,7 +210,9 @@
 
     </footer>
 
+
     <script src="js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
