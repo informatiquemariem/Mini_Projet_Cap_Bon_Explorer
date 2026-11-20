@@ -1,81 +1,32 @@
-window.onload = function () {
-
-    let recherche = document.getElementById("recherche");
-    let categorie = document.getElementById("categorie");
-    let compteur = document.getElementById("compteur");
+function filtrer() {
+    let mot = document.getElementById("recherche").value.toLowerCase();
+    let categorie = document.getElementById("categorie").value;
     let cartes = document.getElementsByClassName("carte");
-    let aucun = document.getElementById("aucun-resultat");
-
-    function filtrer() {
-
-        let mot = recherche.value.toLowerCase();
-        let cat = categorie.value;
-        let nombre = 0;
-
-        for (let i = 0; i < cartes.length; i++) {
-
-            let titre = cartes[i].getElementsByTagName("h3")[0].textContent.toLowerCase();
-
-            let infos = cartes[i].getElementsByTagName("p");
-
-            let categorieActivite = cartes[i].getElementsByClassName("badge")[0].textContent.trim();
-
-            let lieu = infos[2].textContent.toLowerCase();
-
-            if ((titre.indexOf(mot) != -1 || lieu.indexOf(mot) != -1) &&
-                (cat == "Toutes" || cat == categorieActivite)) {
-
-                cartes[i].style.display = "block";
-                nombre = nombre + 1;
-
-            } else {
-
-                cartes[i].style.display = "none";
-
-            }
-        }
-
-        compteur.textContent = nombre;
-
-        if (nombre == 0) {
-            aucun.hidden = false;
+    let compteur = 0;
+    for (let i = 0; i < cartes.length; i++) {
+        let titre = cartes[i].getElementsByTagName("h3")[0].textContent.toLowerCase();
+        let cat = cartes[i].getElementsByTagName("span")[0].textContent;
+        if (titre.indexOf(mot) != -1 && (categorie == "Toutes" || cat == categorie)) {
+            cartes[i].style.display = "block";
+            compteur++;
         } else {
-            aucun.hidden = true;
+            cartes[i].style.display = "none";
         }
     }
-
-    recherche.oninput = filtrer;
-    categorie.onchange = filtrer;
-
-    filtrer();
-
-
-    let boutons = document.getElementsByClassName("btn-primary");
-
-    for (let i = 0; i < boutons.length; i++) {
-
-        boutons[i].onclick = function () {
-
-            let carte = boutons[i].parentElement.parentElement;
-
-            let titre = carte.getElementsByTagName("h3")[0].textContent;
-
-            let infos = carte.getElementsByTagName("p");
-
-            let categorie = carte.getElementsByClassName("badge")[0].textContent;
-
-            let duree = infos[0].textContent;
-            let prix = infos[1].textContent;
-            let lieu = infos[2].textContent;
-
-            alert(
-                "Activité : " + titre + "\n" +
-                "Catégorie : " + categorie + "\n" +
-                lieu + "\n" +
-                duree + "\n" +
-                prix
-            );
-        };
+    document.getElementById("compteur").textContent = compteur;
+    if (compteur == 0) {
+        document.getElementById("aucun-resultat").hidden = false;
+    } else {
+        document.getElementById("aucun-resultat").hidden = true;
     }
-
-};
+}
+function details(bouton) {
+    let carte = bouton.parentElement;
+    let titre = carte.getElementsByTagName("h3")[0].textContent;
+    let categorie = carte.getElementsByTagName("span")[0].textContent;
+    let duree = carte.getElementsByTagName("p")[0].textContent;
+    let prix = carte.getElementsByTagName("p")[1].textContent;
+    let lieu = carte.getElementsByTagName("p")[2].textContent;
+    alert(titre + "\n\n" +"Catégorie : " + categorie + "\n" +duree + "\n" +prix + "\n" +lieu
+    );
+}

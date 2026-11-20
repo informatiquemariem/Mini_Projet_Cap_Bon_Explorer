@@ -1,51 +1,74 @@
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f5f3eb;
     color: #090d60;
 }
+header {
+    padding: 10px 0;
+}
 
+header img {
+    width: 120px;
+    height: auto;
+}
 
+header .container {
+    min-height: 80px;
+}
 header {
     background-color: #07187a;
-    color: rgb(196, 174, 174);
+    color: #c4aeae;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
+}
+.logo {
+    width: 90px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }
 
 header h1 {
     font-size: 30px;
     margin-bottom: 5px;
 }
-nav {
-    margin-top: 20px;
+
+header nav {
+    margin-top: 10px;
 }
-nav a {
-    color: rgb(163, 159, 159);
+
+header nav a {
+    color: #a39f9f;
     text-decoration: none;
-    margin: 12px;
     font-size: 16px;
 }
 
-nav a:hover {
+header nav a:hover,
+header nav a.active {
     color: #16c6b1;
 }
-.car img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
+
+footer {
+    background-color: #07187a;
+    color: #c4aeae;
+    text-align: center;
+    padding: 15px;
 }
 
+footer a {
+    color: #6c93b3;
+    margin: 0 8px;
+}
+
+/* PAGE ACCUEIL  */
 #ba {
     background-color: #d5e9e7;
     text-align: left;
     padding: 25px 15px;
-    margin: 0;
-    border-radius: 15px;
     margin-top: 15px;
-    height: 90%;
+    border-radius: 15px;
 }
 
 #ba h2 {
@@ -58,60 +81,11 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
-/* Boutons */
-
-section a {
-    display: inline-block;
-    background-color: #48b0a9;
-    color: rgb(17, 13, 13);
-    padding: 7px 15px;
-    text-decoration: none;
-    border-radius: 10px;
-}
-
-section a:hover {
-    background-color: #21a6d6;
-}
-section {
-    margin: 30px;
-    padding: 25px;
-}
-
-section h2 {
-    color: #091c23;
-}
-
-.cartes {
-    display: flex;
-    justify-content: left;
-    
-}
-
-.car {
-    background-color: white;
-    width: 400px;
-    padding: 10px;
-    border-radius: 15px;
-    text-align: left;
-    box-shadow: 0 2px 8px #cccccc;
-    transition: 0.3s;
-}
-
-.car:hover {
-    transform: translateY(-5px);
-}
-
-.car img {
+.imgform {
     width: 100%;
     height: 160px;
-    border-radius: 8px;
+    object-fit: cover;
 }
-
-.car h3 {
-    color: #287a75;
-}
-
-
 
 .pour {
     background-color: #c0e5d9;
@@ -121,37 +95,189 @@ section h2 {
 .pour li {
     margin: 10px;
 }
-.reservation {
-    text-align:left;
-    background-color: #acece6;
+
+/*  PAGE ACTIVITES  */
+.activites {
+    width: 95%;
+    max-width: 1100px;
+    margin: 30px auto;
+    color: #173642;
+}
+
+#dec,#rech {
+    background-color: #d5e9e7;
+    text-align: left;
+    padding: 25px 15px;
+    margin: 0 0 15px;
+    border-radius: 15px;
+}
+
+.activites h2 {
+    text-align: left;
+    margin-bottom: 15px;
+    color: #0e2b35;
+}
+
+.activites p {
+    text-align: left;
+    color: #161111;
+}
+
+.activites input,.activites select {
+    margin: 5px 0 15px;
+}
+
+.activites input:focus,.activites select:focus {
+    border-color: #287a75;
+}
+
+.activites .cartes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 85%;
+    max-width: 650px;
+    margin: 30px auto;
+}
+
+.activites .carte {
+    display: block;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.activites .carte h3 {
+    color: #287a75;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.activites .carte img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
-footer {
-    background-color: #07187a;
-    color: rgb(196, 174, 174);
-    text-align: center;
+.activites .carte p {
+    color: #164e63;
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.activites .carte button,
+.activites .carte a {
+    margin-top: 10px;
+}
+
+/*  PAGE AGENDA  */
+.agenda {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    color: #164e63;
+}
+
+#ag {
+    background-color: #d5e9e7;
+    text-align: left;
+    padding: 25px 15px;
+    margin: 0 0 20px;
+    border-radius: 15px;
+}
+
+.agenda h2 {
+    text-align: left;
+    color: #0b1f26;
+    margin-bottom: 15px;
+}
+
+.agenda p {
+    text-align: left;
+    color: #0d0a0a;
+    margin-bottom: 25px;
+}
+
+.agenda caption {
+    color: #0b0f28;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.agenda .tab {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #d5e9e7;
     padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(4, 2, 2, 0.1);
 }
 
-footer a {
-    color: #6c93b3;
+.agenda table {
+    width: 95%;
+    border-collapse: collapse;
+    background-color: #ffEaea;
 }
-/*page reservation*/
-/* PAGE RESERVATION */
 
+.agenda th {
+    background-color: #45a49e;
+    color: #100404;
+    padding: 15px;
+    text-align: center;
+}
+
+.agenda td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #1e0b0b;
+    color: #07171e;
+}
+
+.agenda tbody tr:hover {
+    background-color: #2ca195;
+}
+
+.agenda .prochaines {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #d5e9e7;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.agenda .prochaines h2 {
+    color: #08100f;
+    margin-bottom: 20px;
+}
+
+.agenda .prochaines a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    background-color: #1f7887;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.agenda .prochaines a:hover {
+    background-color: #104b61;
+}
+
+/* PAGE RESERVATION  */
 .reservation main {
     width: 95%;
     max-width: 900px;
     margin: 20px auto;
     color: #07181e;
-    font-family: Arial, sans-serif;
 }
 
 .reservation main h2 {
     text-align: left;
     margin-bottom: 10px;
-    font-size:30px;
+    font-size: 30px;
 }
 
 .reservation main p {
@@ -161,10 +287,10 @@ footer a {
 }
 
 .reservation main form {
-    background-color: rgba(244, 240, 240, 0.916);
-    padding: 30px;
+    background-color: #f4f0f0;
+    padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
 }
 
 .reservation main label {
@@ -178,7 +304,7 @@ footer a {
 .reservation main select,
 .reservation main textarea {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
     box-sizing: border-box;
@@ -197,248 +323,12 @@ footer a {
     text-align: center;
 }
 
-.reservation main button {
-    width: 100%;
-    margin-top: 25px;
-    padding: 13px;
-    background-color: #287a75;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.reservation main button:hover {
-    background-color: #164e63;
-}
-
-/* PAGE ACTIVITES */
-
-.activites {
-    width: 95%;
-    max-width: 1100px;
-    margin: 40px auto;
-    color: #173642;
-    font-family: Arial, sans-serif;
-}
-#dec {
-    background-color: #d5e9e7;
-    text-align: left;
-    padding: 25px 15px;
-    margin: 0;
-    margin-bottom: 10px;
-    border-radius: 15px;
-}
-.activites h2 {
-    text-align:left;
-    margin-bottom: 15px;
-    color: #0e2b35;
-}
-
-.activites p {
-    text-align: left;
-    color: #161111;
-
-}
-
-
-#rech {
-    background-color: #d5e9e7;
-    text-align: left;
-    padding: 25px 15px;
-    margin: 0;
-    border-radius: 15px;
-}
-.activites input,
-.activites select {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    margin: 10px 5px;
-    font-size: 15px;
-}
-
-.activites input:focus,
-.activites select:focus {
-    outline: none;
-    border-color: #287a75;
-}
-
-/* CARTES */
-
-.activites .cartes {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 85%;
-    max-width: 650px;
-    margin: 30px auto;
-}
-
-.activites .carte {
-    display: block;
-    background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-}
-
-
-.activites .carte h3 {
-    color: #287a75;
-    font-size: 23px;
-    margin-bottom: 20px;
-}
-
-
-
-.activites .carte img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-
-
-.activites .carte p {
-    text-align: left;
-    color: #164e63;
-    font-size: 18px;
-    margin: 15px 0;
-}
-/* BOUTON */
-
-.activites .carte button,
-.activites .carte a {
-    display: inline-block;
-    background-color: #287a75;
-    color: white;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 6px;
-    text-decoration: none;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.activites .carte button:hover,
-.activites .carte a:hover {
-    background-color: #164e63;
-}
-
-/* PAGE AGENDA */
-
-.agenda {
-    width: 90%;
-    max-width: 1100px;
-    margin: 40px auto;
-    color: #164e63;
-    font-family: Arial, sans-serif;
-}
-#ag {
-    background-color: #d5e9e7;
-    text-align: left;
-    padding: 25px 15px;
-    margin: 0;
-    border-radius: 15px;
-}
-
-.agenda h2 {
-    text-align:left;
-    color: #0b1f26;
-    margin-bottom: 15px;
-}
-
-.agenda p {
-    text-align: left;
-    color: #0d0a0a;
-    margin-bottom: 30px;
-}
-
-
-caption{
-    color: #0b0f28;
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.agenda .tab {
-    width: 100%;
-    overflow-x: auto;
-    background-color: #d5e9e7;
-    
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(4, 2, 2, 0.1);
-}
-
-.agenda table {
-    width: 95%;
-    border-collapse: collapse;
-    border-radius: 15px;
-    background-color: rgba(255, 234, 234, 0.892);
-}
-
-.agenda th {
-    background-color: #45a49e;
-    color: rgb(16, 4, 4);
-    padding: 15px;
-    text-align: center;
-}
-
-.agenda td {
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #1e0b0b;
-    color: #07171e;
-}
-
-
-
-.agenda tbody tr:hover {
-    background-color: #2ca195;
-}
-
-
-
-.agenda .prochaines {
-    margin-top: 40px;
-    padding: 25px;
-    background-color: #d5e9e7;
-;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.agenda .prochaines h2 {
-    color: #08100f;
-    margin-bottom: 20px;
-}
-
-.agenda .prochaines a {
-    display: inline-block;
-    margin: 10px;
-    padding: 12px 20px;
-    background-color: #1f7887;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.agenda .prochaines a:hover {
-    background-color: #104b61;
-}
-
-
-
+/*  PAGE CONTACT  */
 .contact {
     width: 90%;
     max-width: 1000px;
-    margin: 40px auto;
-    font-family: Arial, sans-serif;
-    color: #000000;
+    margin: 30px auto;
+    color: #000;
 }
 
 .contact h2 {
@@ -451,7 +341,6 @@ caption{
     color: #090c0c;
     margin-bottom: 20px;
 }
-
 
 .contact section {
     background-color: #c6ede9;
@@ -466,14 +355,10 @@ caption{
     line-height: 1.8;
 }
 
-
-
 .contact ul {
     line-height: 2;
     color: #0d0a0a;
 }
-
-
 
 .contact img {
     width: 100%;
@@ -485,27 +370,15 @@ caption{
     border-radius: 12px;
 }
 
-
-
-
-
-.contact summary {
-    color: #0c0e10;
-    font-weight: bold;
+.contact h4 {
     cursor: pointer;
 }
 
-.contact details p {
-    margin-top: 12px;
-}
-
-
-
 .contact form {
-    background-color: rgba(211, 249, 250, 0.916);
-    padding: 30px;
+    background-color: #d3f9fa;
+    padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contact label {
@@ -518,42 +391,29 @@ caption{
 .contact input,
 .contact textarea {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 7px;
     box-sizing: border-box;
     font-size: 15px;
 }
 
-.contact input:focus,
-.contact textarea:focus {
-    outline: none;
-    border-color: #287a75;
-}
-
 .contact textarea {
     height: 120px;
 }
 
+/*  ecran telephone */
+@media (max-width: 576px) {
+    .activites .cartes {
+        width: 100%;
+    }
 
+    .reservation main form,
+    .contact form {
+        padding: 15px;
+    }
 
-.contact button {
-    background-color: #49b3a9;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    margin-top: 20px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    
-}
-
-.contact button:hover {
-    background-color: #18556b;
-}
-.imgform{
-    width: 100%;
-    height: 160px;
+    .agenda .tab {
+        padding: 8px;
+    }
 }

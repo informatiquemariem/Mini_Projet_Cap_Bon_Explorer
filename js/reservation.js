@@ -1,12 +1,11 @@
-
 let activite = document.getElementById("activite");
 let participants = document.getElementById("participants");
 let prixUnitaire = document.getElementById("prixUnitaire");
 let sousTotal = document.getElementById("sousTotal");
 let remise = document.getElementById("remise");
 let total = document.getElementById("total");
-let calculer = document.getElementById("calculer");
-calculer.onclick = function() {
+let resultat = document.getElementById("resultat");
+function calculerPrix() {
     let prix = Number(activite.value);
     let nb = Number(participants.value);
     let st = prix * nb;
@@ -19,11 +18,8 @@ calculer.onclick = function() {
     sousTotal.textContent = st;
     remise.textContent = r;
     total.textContent = tf;
-
-};
-let formulaire = document.getElementsByTagName("form")[0];
-let resultat = document.getElementById("resultat");
-formulaire.onsubmit = function() {
+}
+function confirmer() {
     let nom = document.getElementById("nom").value;
     let prenom = document.getElementById("prenom").value;
     let email = document.getElementById("email").value;
@@ -32,27 +28,23 @@ formulaire.onsubmit = function() {
     let participation = "";
     for (let i = 0; i < type.length; i++) {
         if (type[i].checked) {
-            participation = type[i].value;
-        }
+            participation = type[i].value;   }
     }
-    resultat.innerHTML =
-        "Réservation confirmée !<br>" +
+    resultat.innerHTML = "Réservation confirmée !<br>" +
         "Nom : " + nom + "<br>" +
         "Prénom : " + prenom + "<br>" +
         "Email : " + email + "<br>" +
         "Date : " + date + "<br>" +
         "Type : " + participation + "<br>" +
         "Total : " + total.textContent + " TND";
-    return false;
-};
-formulaire.onreset = function() {
+}
+function reinitialiser() {
     prixUnitaire.textContent = 0;
     sousTotal.textContent = 0;
     remise.textContent = 0;
     total.textContent = 0;
     resultat.innerHTML = "";
-
-};
+}
 
 
 

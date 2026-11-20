@@ -1,9 +1,3 @@
-
-let formulaire = document.getElementById("formulaire");
-let resultat = document.getElementById("resultat");
-
-
-
 function afficher(numero) {
     let reponse = document.getElementById("r" + numero);
     if (reponse.style.display == "none") {
@@ -11,12 +5,9 @@ function afficher(numero) {
     } else {
         reponse.style.display = "none";
     }
-
-};
-
-
-formulaire.onsubmit = function() {
+}
+function envoyerMessage() {
     let nom = document.getElementById("nom").value;
+    let resultat = document.getElementById("resultat");
     resultat.textContent = "Merci " + nom + " ! Votre message a été envoyé avec succès.";
-    return false;
-};
+}
