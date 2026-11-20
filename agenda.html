@@ -1,102 +1,67 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cap Bon Explorer - Agenda</title>
-
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
     <!-- Header -->
     <header class="text-center">
-
-        <h1>Cap Bon Explorer</h1>
-
-        <nav class="navbar navbar-expand-lg navbar-dark">
-
-            <div class="container">
-
-                <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menu"
-                    aria-controls="menu"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-
-                    <span class="navbar-toggler-icon"></span>
-
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-center" id="menu">
-
-                    <ul class="navbar-nav gap-3">
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Accueil</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="activites.html">Activités</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link active" href="agenda.html">Agenda</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="reservation.html">Réservation</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
+    <img src="images/logo.png" alt="Logo Cap Bon Explorer" class="logo">
+    <h1>Cap Bon Explorer</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+                aria-controls="menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="menu">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="activites.html">Activités</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agenda.html">Agenda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reservation.html">Réservation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
             </div>
-
-        </nav>
-
-    </header>
-
-
+        </div>
+    </nav>
+</header>
     <main class="agenda container">
-
         <!-- Présentation -->
         <section id="ag" class="p-4 text-center">
-
             <h2>Agenda des événements</h2>
-
             <p class="lead">
                 Découvrez notre programme d'activités et participez
                 aux différentes expériences proposées dans le Cap Bon.
             </p>
-
         </section>
-
-
         <!-- Tableau des événements -->
         <section class="py-3">
-
             <h2>Nos prochains événements</h2>
-
             <div class="tab table-responsive">
-
                 <table class="table table-bordered table-hover table-striped text-center align-middle">
-
                     <caption class="caption-top">
                         Programme des événements Cap Bon Explorer
                     </caption>
-
                     <thead class="table-primary">
-
                         <tr>
                             <th scope="col">Date</th>
                             <th scope="col">Activité</th>
@@ -104,11 +69,8 @@
                             <th scope="col">Lieu</th>
                             <th scope="col">Tarif</th>
                         </tr>
-
                     </thead>
-
                     <tbody>
-
                         <tr>
                             <td>05/12/2026</td>
                             <td>Promenade photographique</td>
@@ -118,17 +80,14 @@
                                 <span class="badge text-bg-success">30 TND</span>
                             </td>
                         </tr>
-
                         <tr>
                             <td>12/12/2026</td>
                             <td>Initiation à la poterie</td>
                             <td>10:00</td>
                             <td>Nabeul</td>
-                            <td>
-                                <span class="badge text-bg-success">35 TND</span>
+                            <td><span class="badge text-bg-success">35 TND</span>
                             </td>
                         </tr>
-
                         <tr>
                             <td>19/12/2026</td>
                             <td>Randonnée découverte</td>
@@ -138,7 +97,6 @@
                                 <span class="badge text-bg-success">25 TND</span>
                             </td>
                         </tr>
-
                         <tr>
                             <td>09/01/2027</td>
                             <td>Découverte de la médina</td>
@@ -148,7 +106,6 @@
                                 <span class="badge text-bg-success">20 TND</span>
                             </td>
                         </tr>
-
                         <tr>
                             <td>16/01/2027</td>
                             <td>Peinture sur céramique</td>
@@ -158,7 +115,6 @@
                                 <span class="badge text-bg-success">25 TND</span>
                             </td>
                         </tr>
-
                         <tr>
                             <td>23/01/2027</td>
                             <td>Découverte du marché local</td>
@@ -168,51 +124,29 @@
                                 <span class="badge text-bg-success">15 TND</span>
                             </td>
                         </tr>
-
                     </tbody>
-
                 </table>
-
             </div>
-
         </section>
-
-
         <!-- Prochaines expériences -->
         <section class="prochaines p-3">
-
             <h2>Prochaines expériences</h2>
-
             <div class="d-flex flex-column flex-md-row gap-3">
-
                 <a href="activites.html" class="btn btn-primary">
                     Découvrir toutes les activités
                 </a>
-
                 <a href="reservation.html" class="btn btn-success">
                     Réserver une activité
                 </a>
-
             </div>
-
         </section>
-
     </main>
-
-
     <!-- Footer -->
     <footer class="text-center p-3">
-
         <p>© 2026 Cap Bon Explorer - Tous droits réservés</p>
-
         <a href="index.html">Accueil</a>
         <a href="contact.html">Contact</a>
-
     </footer>
-
-
     <script src="js/bootstrap.bundle.min.js"></script>
-
 </body>
-
 </html>
